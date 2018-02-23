@@ -14,15 +14,15 @@ app.get('/article-one',function(req,res)
 });
 app.get('/article-two',function(req,res)
 {
-    res.sendFile("article one requested and will be served ");
+    res.send("article one requested and will be served ");
 });
 app.get('/article-three',function(req,res)
 {
-    res.sendFile("article one requested and will be served ");
+    res.send("article one requested and will be served ");
 });
 
 app.get('/ui/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+  res.send(path.join(__dirname, 'ui', 'style.css'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
