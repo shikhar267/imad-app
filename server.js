@@ -12,9 +12,16 @@ var content={
     content: `
     <p>This is shikhar singh</p>
   <p>  Graduating</p>
-   <p> Learner </p> `
+   <p> Learner </p>`
      
 };
+
+function createTemplate(data){
+    var title=data.title;
+    var date=data.date;
+    var heading=data.heading;
+    var content=data.content;
+    
 var htmlTemplate=`
 <html>
     <head>
@@ -40,7 +47,9 @@ var htmlTemplate=`
                    
             </div>
     </body>
-</html>
+</html>`;
+return htmlTemplate;
+}
 
 
 
@@ -53,7 +62,7 @@ app.get('/', function (req, res) {
 });
 app.get('/article-one',function(req,res)
 {
-   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+   res.send(createTemplate(articleOne));
 });
 app.get('/article-two',function(req,res)
 {
