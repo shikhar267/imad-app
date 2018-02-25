@@ -1,5 +1,5 @@
 console.log('Loaded!');
-
+var counter=0;
 var element=document.getElementById("counter");
 button.onclick=function(){
     //make a request to the counter endpoint
