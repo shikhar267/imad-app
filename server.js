@@ -60,7 +60,7 @@ app.get('/', function (req, res) {
 });
 function hash(input,salt){
     //how do wecreate hash
-    var hashed=crypto.pbkdf2Sync(input,salt,512,'sha512');
+    var hashed=crypto.pbkdf2Sync(input,salt,1000,512,'sha512');
     return hashed.toString('hex');
     
 }
